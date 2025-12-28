@@ -1,23 +1,12 @@
-// Import useState hook
 import { useState } from "react";
-
-// Form to add new fleet
 export default function AddFleetForm({ setFleets }) {
-  // Vehicle number state
   const [regNo, setRegNo] = useState("");
-
-  // Driver name state
   const [driver, setDriver] = useState("");
-
-  // Add fleet to list
   const addFleet = () => {
-    // Validate inputs
     if (!regNo.trim() || !driver.trim()) {
       alert("Fields cannot be empty");
       return;
     }
-
-    // Add new fleet object
     setFleets((prev) => [
       ...prev,
       {
