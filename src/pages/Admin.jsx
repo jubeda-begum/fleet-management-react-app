@@ -1,13 +1,7 @@
-// Import useState hook
 import { useState } from "react";
-
-// Import components
 import AddFleetForm from "../components/AddFleetForm";
 import FleetList from "../components/FleetList";
-
-// Admin dashboard page
 export default function Admin() {
-  // State to store fleet data
   const [fleets, setFleets] = useState([]);
 
   return (
